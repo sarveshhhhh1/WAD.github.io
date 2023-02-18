@@ -1,0 +1,77 @@
+﻿<!DOCTYPE html>
+<html>
+  <head>
+    <title>Ticket Booking</title>
+    <style>
+      body {
+        background-image: url(https://www.example.com/movie_background.jpg);
+        background-size: cover;
+      }
+      form {
+        width: 500px;
+        margin: 150px auto;
+        text-align: left;
+        padding: 20px;
+        border: 1px solid #ccc;
+        border-radius: 5px;
+        box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
+        background-color: rgba(255,255,255,0.8);
+        transition: 0.3s;
+      }
+      form:hover {
+        box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2);
+      }
+      label {
+        font-weight: bold;
+      }
+      input[type="text"],
+      input[type="email"],
+      select {
+        width: 100%;
+        padding: 12px 20px;
+        margin: 8px 0;
+        box-sizing: border-box;
+        border: 2px solid #ccc;
+        border-radius: 4px;
+        transition: 0.5s;
+      }
+      input[type="text"]:focus,
+      input[type="email"]:focus,
+      select:focus {
+        border-color: #555;
+      }
+      input[type="submit"] {
+        width: 100%;
+        background-color: #4CAF50;
+        color: white;
+        padding: 14px 20px;
+        margin: 8px 0;
+        border: none;
+        border-radius: 4px;
+        cursor: pointer;
+      }
+      input[type="submit"]:hover {
+        background-color: #45a049;
+      }
+    </style>
+  </head>
+  <body>
+    <h1 style="text-align: center;">Ticket Booking</h1>
+    <form action="submit_ticket.php" method="post">
+      <label for="name">Name:</label>
+      <input type="text" id="name" name="name" required><br><br>
+      <label for="email">Email:</label>
+      <input type="email" id="email" name="email" required><br><br>
+      <label for="event">Event:</label>
+      <select id="event" name="event" required>
+        <option value="">Select an Event</option>
+        <option value="event1">Event 1</option>
+        <option value="event2">Event 2</option>
+        <option value="event3">Event 3</option>
+      </select><br><br>
+      <label for="tickets">Number of Tickets:</label>
+      <input type="number" id="tickets" name="tickets" min="1" required><br><br>
+      <input type="submit" value="Book Ticket">
+    </form>
+  </body>
+</html>
